@@ -1,0 +1,24 @@
+name: 'pm2使用nuxt自动部署'
+description: '提交到服务器并使用pm2部署运行'
+inputs:
+  SERVER-IP:
+    description: '服务端地址'
+    required: true
+  SERVER-USER:
+    description: '登录用户'
+    required: true
+  SSH-KEY:
+    description: '登录凭证'
+    required: true
+  SOURCE:
+    description: '文件'
+    required: true
+  UPLOAD-REMOTE:
+    description: 'ftp目录'
+    required: true
+  TARGET:
+    description: '项目目录'
+    required: true
+runs:
+  using: 'node14'
+  main: 'index.js'
