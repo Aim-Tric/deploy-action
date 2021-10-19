@@ -4,7 +4,6 @@ const ssh = require("ssh2");
 const fs = require("fs");
 
 try {
-  // alter
   const serverIp = core.getInput("server_ip"); // 服务器ip
   const user = core.getInput("server_user"); // 用户名
   const sshKey = core.getInput("ssh_key"); // ssh秘钥
