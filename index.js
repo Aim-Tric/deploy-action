@@ -4,12 +4,11 @@ const ssh = require("ssh2");
 const fs = require("fs");
 
 try {
-  // alter
-  const serverIp = core.getInput("server_ip"); // 服务器ip
-  const user = core.getInput("server_user"); // 用户名
-  const sshKey = core.getInput("ssh_key"); // ssh秘钥
+  const serverIp = core.getInput("serverip"); // 服务器ip
+  const user = core.getInput("serveruser"); // 用户名
+  const sshKey = core.getInput("sshkey"); // ssh秘钥
   const source = core.getInput("source"); // 文件目录
-  const uploadRemote = core.getInput("upload_remote"); // 上传目录
+  const uploadRemote = core.getInput("uploadremote"); // 上传目录
   const target = core.getInput("target"); // 项目目录
   // 连接ssh
   let conn = new ssh.Client();
